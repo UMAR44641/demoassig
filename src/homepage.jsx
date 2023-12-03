@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Button } from '@chakra-ui/react'
 import {Image,Badge,Text} from '@chakra-ui/react'
 // import {DatePicker} from 'chakra-ui-date-input'
 import React,{useEffect, useState} from "react";
@@ -11,16 +11,16 @@ function Homepage() {
   const [alert,setALert] = useState(false);
   function setdate(d){
     setValue(d);
-    console.log(d.toString().slice(0,15))
+    console.log(d.toString().slice(0,15));
   }
-  const hov=(e)=>{
-     e.target.style.backgroundColor="rgb(26,115,232)";
-     e.target.style.color="white";
-  }
-  const dehov=(e)=>{
-    e.target.style.backgroundColor="white";
-    e.target.style.color="black";
- }
+//   const hov=(e)=>{
+//      e.target.style.backgroundColor="rgb(26,115,232)";
+//      e.target.style.color="white";
+//   }
+//   const dehov=(e)=>{
+//     e.target.style.backgroundColor="white";
+//     e.target.style.color="black";
+//  }
  const settimeFun=(e)=>{
   console.log(e.target.innerText);
   setTime(time=>e.target.innerText);
@@ -42,24 +42,24 @@ function Homepage() {
     Time selected!
   </Alert>}
           <Box height="50px" display="flex" flexDirection="row" marginRight="-100px" marginBottom="15px">
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="8:00 AM" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}} fontSize="12px" cursor="pointer" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} border="1px solid black">8:00 AM</Box>
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="8:30 AM" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}}  fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">8:30 AM</Box>
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="8:45 AM" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}}  fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">8:45 AM</Box>
+          <Button id="colorid" isDisabled={value.toString().slice(0,3)=='Sun'?true:false} onClick={(e)=>{settimeFun(e)}} fontSize="12px" cursor="pointer" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} border="1px solid black">8:00 AM</Button>
+          <Button id="colorid" isDisabled={value.toString().slice(0,3)=='Sun'?true:false} onClick={(e)=>{settimeFun(e)}} fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">8:30 AM</Button >
+          <Button id="colorid" isDisabled={value.toString().slice(0,3)=='Sun'?true:false} onClick={(e)=>{settimeFun(e)}} fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">8:45 AM</Button>
           </Box>
           <Box  height="50px" display="flex" flexDirection="row" marginRight="-100px" marginBottom="15px">
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="9:00 AM" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}}  fontSize="12px" cursor="pointer" padding="15px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} border="1px solid black">9:00 AM</Box>
+          <Button id="colorid" isDisabled={value.toString().slice(0,3)=='Sun'?true:false} onClick={(e)=>{settimeFun(e)}} fontSize="12px" cursor="pointer" padding="15px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} border="1px solid black">9:00 AM</Button>
           <Box fontSize="12px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} >-------</Box>
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="12 NOON" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}}  fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">12 NOON</Box>
+          <Button id="colorid" isDisabled={value.toString().slice(0,3)=='Sun'?true:false} onClick={(e)=>{settimeFun(e)}} fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">12 NOON</Button>
           </Box>
           <Box  height="50px" display="flex" flexDirection="row" marginRight="-100px" marginBottom="15px">
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="12:30 PM" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}}  fontSize="12px" cursor="pointer" padding="15px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} border="1px solid black">12:30 PM</Box>
+          <Button id="colorid" isDisabled={value.toString().slice(0,3)=='Mon'?true:false||value.toString().slice(0,3)=='Tue'?true:false||value.toString().slice(0,3)=='Wed'?true:false||value.toString().slice(0,3)=='Thu'?true:false||value.toString().slice(0,3)=='Sun'?true:false||value.toString().slice(0,3)=='Fri'?true:false||value.toString().slice(0,3)=='Sat'?true:false} onClick={(e)=>{settimeFun(e)}}  fontSize="12px" cursor="pointer" padding="15px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} border="1px solid black">12:30 PM</Button>
           <Box fontSize="12px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} >-------</Box>
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="5:00 PM" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}}  fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">5:00 PM</Box>
+          <Button id="colorid" isDisabled={value.toString().slice(0,3)=='Sun'?true:false} onClick={(e)=>{settimeFun(e)}} fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">5:00 PM</Button>
           </Box>
           <Box  height="50px" display="flex" flexDirection="row" marginRight="-100px">
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="5:30 PM" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}}  fontSize="12px" cursor="pointer" padding="15px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} border="1px solid black">5:30 PM</Box>
+          <Button id="colorid" isDisabled={true} onClick={(e)=>{settimeFun(e)}} fontSize="12px" cursor="pointer" padding="15px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"100px",md:"150px",lg:"100px"}} border="1px solid black">5:30 PM</Button>
           <Box fontSize="12px" textAlign="center" justifyContent="center" marginRight={{base:"20px",sm:"50px",md:"150px",lg:"100px"}} padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} >-------</Box>
-          <Box onMouseEnter={(e)=>hov(e)} onMouseLeave={(e)=>dehov(e)} name="8:00 AM" onClick={(e)=>{settimeFun(e)}} style={ time==="8:00 PM" ? { backgroundColor:'rgb(26,115,232)', color: 'white'} : {}}  fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">8:00 PM</Box>
+          <Button id="colorid" isDisabled={true} onClick={(e)=>{settimeFun(e)}} fontSize="12px" cursor="pointer" textAlign="center" justifyContent="center" padding={{base:"2px",sm:"5px",md:"10px",lg:"15px"}} border="1px solid black">8:00 PM</Button>
           </Box>
         </Box>
     </Box>

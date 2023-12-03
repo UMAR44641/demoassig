@@ -1,7 +1,15 @@
 .App {
   text-align: center;
 }
-
+#colorid {
+  background-color: white;
+}
+#colorid:disabled {
+    background-color: grey;
+}
+#colorid:hover{
+  background-color: rgb(26,115,232);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
